@@ -15,10 +15,10 @@ const Details = props => {
             </View>
             <View>
                 {workout.exercises.map(exercise => (
-                    <Text>{exercise.name}</Text>
+                    <Text key={exercise.id} style={styles.exercise}>{exercise.name}</Text>
                 ))}
             </View>
-
+            
         </View>
     )
 }
@@ -31,7 +31,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#EEEEEE',
         padding: 12,
         marginBottom: 1,
-        flexDirection: 'row',
     },
     fileImage: {
         width: 50,
@@ -44,9 +43,14 @@ const styles = StyleSheet.create({
         fontSize: 20
     },
     bio: {
+        fontSize: 16,
         paddingLeft: 12,
         paddingTop: 12,
         paddingRight: 50
+    },
+    exercise: {
+        paddingLeft: 12,
+        paddingTop: 10
     }
 });
 

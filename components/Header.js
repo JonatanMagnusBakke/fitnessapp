@@ -11,20 +11,21 @@ const Header = props => props.workoutId ? (
     </TouchableOpacity>
 ): (
     <View style={styles.header}>
-        <Text style={styles.title}>Fitness App</Text>
+        <Text style={styles.title}>Ready to workAAA?</Text>
     </View>
 )
 
 
 const styles = StyleSheet.create({
     header: {
-        backgroundColor: '#666666',
-        paddingTop: 32,
+        backgroundColor: '#6395ed',
+        paddingTop: 64,
         paddingBottom: 12
     },
     title: {
         textAlign: 'center',
-        color: '#FFFFFF'
+        color: '#FFF',
+        fontSize: 32
     }
 })
 

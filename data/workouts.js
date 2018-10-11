@@ -1,7 +1,7 @@
 export default[{
     id: 1,
-    name: 'Test Workout 1',
-    bio: 'bio for test Workout 1',
+    name: 'Arms - Intermediate',
+    bio: 'This will stregthen your arms',
     exercises: [
         {
         id: 1,

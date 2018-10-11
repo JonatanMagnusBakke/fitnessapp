@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import Listing from './screens/Listing';
 import Header from './components/Header';
 import Details from './screens/Details';
+import Footer from './components/Footer';
 
 export default class App extends React.Component {
 
@@ -24,14 +25,15 @@ export default class App extends React.Component {
 
   render() {
     return (
-        <View >
-          <Header {...this.state} setWorkout={this.setWorkout} />
-          {this.state.workoutId ? (
-            <Details {...this.state} />
-          ) : (
-              <Listing setWorkout={this.setWorkout} />
-            )}
-        </View>
+      <View >
+        <Header {...this.state} setWorkout={this.setWorkout} />
+        {this.state.workoutId ? (
+          <Details {...this.state} />
+        ) : (
+            <Listing setWorkout={this.setWorkout} />
+          )}
+          <Footer {...this.state} setWorkout={this.setWorkout}/>
+      </View>
     );
   }
 }
