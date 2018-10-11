@@ -13,6 +13,11 @@ const Details = props => {
                 <Text style={styles.name}>{workout.name}</Text>
                 <Text style={styles.bio}>{workout.bio}</Text>
             </View>
+            <View>
+                {workout.exercises.map(exercise => (
+                    <Text>{exercise.name}</Text>
+                ))}
+            </View>
 
         </View>
     )
